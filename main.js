@@ -4,6 +4,8 @@ const client = new Discord.Client();
 
 const gacha = require('./gacha');
 
+const keepAlive = require('./server.js');
+
 client.once('ready', () => {
     console.log('Gacha online!');
 });
@@ -19,4 +21,5 @@ client.on('message', message => {
     }
 });
 
-client.login('OTc5NDU1MzEyNzczOTMxMDQ4.GqHIho.oAmVWjinwThSU5Y3TMcvFsRY_JSWR18Grb3s5Q');
+client.login('OTc5NDU1MzEyNzczOTMxMDQ4.Gjs-Sr.xH8b9UsLdnjST6zuTAUn1-amsZ9VbVuefUJ_is');
+keepAlive();
