@@ -14,14 +14,16 @@ client.once('ready', () => {
     console.log('Gacha online!');
 });
 
-client.on('message', message => {
+client.on('messageCreate', message => {
     if(message.content === 'gacha') {
         message.reply('» Lanzando el D100...\n')
-        message.channel.send(gacha.pull());
+        const embed = gacha.pull();
+        message.channel.send({ embeds: [embed] });
     }
     if(message.content === 'phos') {
         message.reply('» Lanzando el D100...\n')
-        message.channel.send(gacha.phos());
+        const embed = gacha.phos();
+        message.channel.send({ embeds: [embed] });
     }
 });
 
