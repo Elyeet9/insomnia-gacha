@@ -1,4 +1,5 @@
-const { Client, Intents } = require('discord.js');
+const { Client, Intents, MessageEmbed } = require('discord.js');
+const gacha = require('./gacha');
 
 const client = new Client({
     intents: [
@@ -6,8 +7,6 @@ const client = new Client({
         Intents.FLAGS.GUILD_MESSAGES
     ]
 });
-
-const gacha = require('./gacha');
 
 const keepAlive = require('./server.js');
 
@@ -17,14 +16,14 @@ client.once('ready', () => {
 
 client.on('message', message => {
     if(message.content === 'gacha') {
-        message.channel.send('» Lanzando el D100...\n')
+        message.reply('» Lanzando el D100...\n')
         message.channel.send(gacha.pull());
     }
     if(message.content === 'phos') {
-        message.channel.send('» Lanzando el D100...\n')
+        message.reply('» Lanzando el D100...\n')
         message.channel.send(gacha.phos());
     }
 });
 
-client.login('OTc5NDU1MzEyNzczOTMxMDQ4.Gjs-Sr.xH8b9UsLdnjST6zuTAUn1-amsZ9VbVuefUJ_is');
+client.login('OTc5NDU1MzEyNzczOTMxMDQ4.GfM5CB.3fKX6zkiouCEgT93m4ba7KA-oglrB9b56uHKqM');
 keepAlive();
