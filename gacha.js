@@ -84,7 +84,7 @@ var pull = function() {
     }
     else if(result >= 2 && result <= 20) {
         embed.setDescription('x2 Good Quality Rations');
-        embed.setImage('https://www.belloflostsouls.net/wp-content/uploads/2020/03/dnd-rations-elves.jpg');
+        embed.setImage('https://i.pinimg.com/originals/ac/5e/b8/ac5eb857ae83ad8c4b16e6a4ef869dd4.jpg');
     }
     else if(result >= 21 && result <= 30) {
         embed.setDescription('x5 Silver Piece');
