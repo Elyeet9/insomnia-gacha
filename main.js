@@ -20,9 +20,9 @@ client.on('messageCreate', message => {
         const embed = gacha.pull();
         message.channel.send({ embeds: [embed] });
     }
-    if(message.content === 'phos') {
+    if(message.content === 'guion') {
         message.reply('» Lanzando el D100...\n')
-        const embed = gacha.phos();
+        const embed = gacha.guion();
         message.channel.send({ embeds: [embed] });
     }
 });
