@@ -1,5 +1,5 @@
 var Chance = require('chance');
-var { MessageEmbed } = require('discord.js')
+var { EmbedBuilder } = require('discord.js')
 var chance = new Chance();
 
 var roll = function() {
@@ -8,7 +8,7 @@ var roll = function() {
 
 var guion = function() {
     var result = roll();
-    const embed = new MessageEmbed()
+    const embed = new EmbedBuilder()
     .setColor('#f3e671')
     .setTitle('» GUION ROLL: [' + result + '] «')
     .setURL('https://youtu.be/iik25wqIuFo')
@@ -68,7 +68,7 @@ var guion = function() {
 var pull = function() {
 
     var result = roll();
-    const embed = new MessageEmbed()
+    const embed = new EmbedBuilder()
         .setColor('#f3e671')
         .setTitle('» Roll: [' + result + '] «')
         .setURL('https://youtu.be/iik25wqIuFo')

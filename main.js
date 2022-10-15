@@ -1,10 +1,11 @@
-const { Client, Intents } = require('discord.js');
+const { Client, GatewayIntentBits } = require('discord.js');
 const gacha = require('./gacha');
 
 const client = new Client({
     intents: [
-        Intents.FLAGS.GUILDS,
-        Intents.FLAGS.GUILD_MESSAGES
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent
     ]
 });
 
@@ -16,7 +17,7 @@ client.once('ready', () => {
 
 client.on('messageCreate', message => {
     if(message.content === 'gacha') {
-        message.reply('» Lanzando el D100...\n')
+        //message.reply('» Lanzando el D100...\n')
         const embed = gacha.pull();
         message.channel.send({ embeds: [embed] });
     }
