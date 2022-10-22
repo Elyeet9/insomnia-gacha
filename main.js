@@ -17,11 +17,13 @@ client.once('ready', () => {
 
 client.on('messageCreate', message => {
     if(message.content === 'gacha') {
-        //message.reply('» Lanzando el D100...\n')
+        console.log('Gacha utilizado');
+        message.reply('» Lanzando el D100...\n')
         const embed = gacha.pull();
         message.channel.send({ embeds: [embed] });
     }
     if(message.content === 'guion') {
+        console.log('Guion utilizado');
         message.reply('» Lanzando el D100...\n')
         const embed = gacha.guion();
         message.channel.send({ embeds: [embed] });
