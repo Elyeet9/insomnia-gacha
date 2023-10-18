@@ -27,5 +27,5 @@ client.on('messageCreate', message => {
     }
 });
 
-client.login('OTc5NDU1MzEyNzczOTMxMDQ4.GfM5CB.3fKX6zkiouCEgT93m4ba7KA-oglrB9b56uHKqM');
+client.login('deprecated...');
 keepAlive();
