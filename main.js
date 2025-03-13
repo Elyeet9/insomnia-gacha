@@ -1,5 +1,7 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 const gacha = require('./gacha');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const client = new Client({
     intents: [
@@ -30,5 +32,5 @@ client.on('messageCreate', message => {
     }
 });
 
-client.login('OTc5NDU1MzEyNzczOTMxMDQ4.GfM5CB.3fKX6zkiouCEgT93m4ba7KA-oglrB9b56uHKqM');
+client.login(process.env.DISCORD_TOKEN);
 keepAlive();
